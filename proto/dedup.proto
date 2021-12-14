@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package dedup;
+
+service Deduplicate {
+
+
+  // TODO 
+  // * rename to something general
+  // * make this repeated SerializedStructs
+  // * make this stream SerializedStructs?
+  rpc Insert(SerializedStruct) returns (Empty) {}
+
+  rpc Load(stream SizedSerializedStruct) returns (Empty) {}
+
+  rpc GetMax(Empty) returns (SerializedStruct) {}
+
+}
+
+message SerializedStruct {
+  bytes data = 1; 
+}
+
+message SizedSerializedStruct {
+  uint64 total_size = 1;
+  bytes data = 2; 
+}
+
+//maybe return a status in the future
+message Empty {}

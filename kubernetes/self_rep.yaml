@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: self-rep
+  labels:
+    app: self-rep
+spec:
+  serviceAccountName: private-user
+  volumes:
+  - name: executables
+    persistentVolumeClaim:
+      claimName: executables
+  restartPolicy: OnFailure
+  containers:
+  - name: main
+    image: ubuntu:20.10
+    workingDir: /mnt
+    command: ["./self_replicating"]
+    volumeMounts:
+    - name: executables
+      mountPath: /mnt
+  - name: kubectl-sidecar
+    image: private-docker-repo/kubectl-sidecar:0.1.0
+    ports:
+    - containerPort: 8001
