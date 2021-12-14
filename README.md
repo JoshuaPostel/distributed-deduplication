@@ -8,6 +8,8 @@ Accomplish the goal, but not in a clean or easily reproducable manner.  Abandone
 
 ## Design
 
+![rudders drawio](https://user-images.githubusercontent.com/13628629/146095452-d9bb7e5c-773c-4134-b38e-f4f93248e21a.png)
+
 
 ## Motivation
 
