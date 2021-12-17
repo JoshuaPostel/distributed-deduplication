@@ -17,7 +17,7 @@ I was frustrated with non-deterministic (dataset dependent) OOM errors in [Spark
 
 ## Learnings
 
-* A proxy/communication bus is a much better design for this task
+* A proxy is a much better design for this task
 * Sending and receiving serialized data over the wire
   * started with TCP, but transitioned to gRPC
 * Debugging and avoiding deadlocks
