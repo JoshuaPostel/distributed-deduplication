@@ -4,7 +4,7 @@
 Use multiple kubernetes pods to deduplicate a dataset which is larger than the memory of any single pod.
 
 ## Result
-Accomplish the goal, but not in a clean or easily reproducable manner.  Abandoned the project before wrapping it up neatly de to the complexity of testing.
+Accomplish the goal, but not in a clean or easily reproducable manner.  Abandoned the project before wrapping it up neatly due to the complexity of testing.
 
 ## Design
 
