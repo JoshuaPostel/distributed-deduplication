@@ -1,4 +1,4 @@
-# rudders
+# distributed-deduplication
 
 ## Goal
 Use multiple kubernetes pods to deduplicate a dataset which is larger than the memory of any single pod.
